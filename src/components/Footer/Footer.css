@@ -1,0 +1,140 @@
+/* General footer styles */
+.footer {
+  background-color: #0f2d5f;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style for the "Scalable" link in the footer */
+.footer-content p a {
+  color: white; /* Keep the link color white */
+  text-decoration: none;
+  font-size: 18px; /* Use viewport width for responsiveness */
+}
+
+.footer-content p a:hover {
+  color: #ffcc00; /* Hover effect for the link */
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Make text and links responsive */
+.footer-content p, .footer-content a {
+  margin: 5px 0;
+  color: white;
+  font-size: 18px; /* Default font size for larger screens */
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+/* Style the links in the footer */
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 18px; /* Default font size for larger screens */
+}
+
+.footer-links a:hover {
+  color: #ffcc00; /* Change color on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Social icons container */
+.social-icons {
+  margin-top: 15px;
+}
+
+/* Style the social media icons */
+.social-icons a {
+  font-size: 35px; /* Responsive icon size */
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #ffcc00; /* Icon color on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .footer-content {
+    padding: 20px 10px;
+  }
+
+  .footer-links a {
+    font-size: 3vw; /* Adjust font size for medium-sized screens */
+    margin: 0 8px;
+  }
+
+  .social-icons a {
+    font-size: 4vw; /* Adjust icon size for medium-sized screens */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Stack the links and icons vertically on smaller screens */
+  .footer-content {
+    padding: 15px 10px;
+  }
+
+  .footer-links {
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .footer-links a {
+    display: block;
+    margin: 10px 0;
+    font-size: 4vw; /* Adjust font size for tablets */
+  }
+
+  .social-icons {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .social-icons a {
+    font-size: 6vw; /* Adjust icon size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for small screens (like phones) */
+  .footer-content p {
+    font-size: 4vw; /* Increase font size for readability on smaller screens */
+  }
+
+  .footer-links a {
+    font-size: 5vw; /* Adjust links font size for small screens */
+    margin: 8px 0;
+  }
+
+  .social-icons a {
+    font-size: 7vw; /* Increase icon size for small screens */
+    margin: 0 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  /* Further reduce sizes for ultra-small screens */
+  .footer-content {
+    padding: 5px; /* Reduce padding for very small screens */
+  }
+
+  .footer-links a {
+    font-size: 6vw; /* Adjust font size for ultra-small screens */
+    margin: 0 3px;
+  }
+
+  .social-icons a {
+    font-size: 8vw; /* Increase icon size for very small screens */
+    margin: 0 3px;
+  }
+
+  .footer-content p {
+    font-size: 6vw; /* Adjust paragraph font size for tiny screens */
+  }
+}

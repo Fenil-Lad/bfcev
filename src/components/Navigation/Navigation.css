@@ -1,0 +1,185 @@
+/* Navigation Bar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;  /* Distribute the items with space between them */
+    align-items: center;
+    width: 80%;  /* Adjust the width to fit better */
+    margin: auto;  /* Center the navbar */
+    padding: 10px 0;
+    height: 47px;
+}
+
+/* Logo Styles */
+.navbar .logo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;  /* Align the logo to the left */
+}
+
+.navbar .logo img {
+    height: 30px;  /* Adjust based on your logo size */
+    width: auto;
+}
+
+/* Nav Links */
+.nav-links {
+    flex: 2;  /* Make the nav links take up more space */
+    display: flex;
+    justify-content: center;  /* Center the navigation links */
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #0052a5; /* Highlight color */
+}
+
+/* Call-to-action button styling */
+.cta {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;  /* Align the button to the right */
+}
+
+.cta button {
+    background: linear-gradient(135deg, #0f2d5f, #0055be, #3584e5);
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-size: 200% 200%; /* Increase the size of the gradient */
+    transition: transform 0.3s ease, background-position 1s ease;
+}
+
+.cta button:hover {
+    background-color: #003a7d; /* Darker shade on hover */
+    background-position: 100% 100%; /* Moves the gradient position when hovered */
+}
+
+/* Mobile responsive styling */
+@media screen and (max-width: 768px) {
+    .navbar {
+        width: 90%; /* Make the navbar take up more space on small screens */
+    }
+
+    .navbar .logo img {
+        height: 35px;  /* Reduce logo size on mobile */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 200px;
+        border-radius: 8px;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+    }
+
+    /* Add Get Started option to the mobile menu */
+    .navbar.active .nav-links ul li.cta-mobile {
+        margin-top: 20px; /* Add margin to the "Get Started" option */
+        text-align: center;
+    }
+
+    /* Show the hamburger menu when clicked */
+    .navbar.active .nav-links {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        width: 30px;
+        height: 25px;
+        position: relative;
+    }
+
+    .hamburger span {
+        /* background-color: #333; */
+        background: #0052a5;
+        border-radius: 5px;
+        height: 5px;
+        width: 100%;
+        position: absolute;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger span:nth-child(1) {
+        top: 0;
+    }
+
+    .hamburger span:nth-child(2) {
+        top: 10px;
+    }
+
+    .hamburger span:nth-child(3) {
+        bottom: 0;
+    }
+}
+
+/* Hide the CTA button on mobile when the menu is not active */
+.cta {
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .cta {
+        display: none; /* Hide the desktop button on mobile */
+    }
+
+    /* Show Get Started as a menu item inside the mobile menu */
+    .navbar.active .cta-mobile {
+        display: block;  /* Display Get Started in the mobile menu */
+    }
+
+    .navbar.active .nav-links {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Extra small devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .nav-links a {
+        font-size: 14px;  /* Smaller font size for smaller screens */
+    }
+
+    .cta button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
