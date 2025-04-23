@@ -1,140 +1,129 @@
-/* General footer styles */
 .footer {
-  background-color: #0f2d5f;
-  color: white;
-  padding: 20px;
+  /* background-color: #01002c; */
+  /* background: linear-gradient(135deg, #000632, #012a5a, #014986); */
+  /* background-color: #01002c; */
+  color: #ffffff;
+  padding: 4rem 2rem 2rem;
+  font-family: 'Inter', sans-serif;
+  border-top: 1px solid white;
+}
+
+.footer-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.footer-logo-img {
+  width: 140px;
+  height: auto;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer-link {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.contact-icon {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+  flex-shrink: 0;
+}
+
+.contact-link {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #ffffff;
+}
+
+.footer-social-media {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.footer-social-icon {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  transition: color 0.3s ease;
+}
+
+.footer-social-icon:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
+  padding-top: 1.5rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #aaa;
 }
 
-/* Style for the "Scalable" link in the footer */
-.footer-content p a {
-  color: white; /* Keep the link color white */
+.scalable-link {
+  color: #e0e0e0;
   text-decoration: none;
-  font-size: 18px; /* Use viewport width for responsiveness */
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-.footer-content p a:hover {
-  color: #ffcc00; /* Hover effect for the link */
-  text-decoration: underline; /* Underline on hover */
+.scalable-link:hover {
+  color: #ffffff;
 }
 
-/* Make text and links responsive */
-.footer-content p, .footer-content a {
-  margin: 5px 0;
-  color: white;
-  font-size: 18px; /* Default font size for larger screens */
-}
 
-.footer-links {
-  margin-top: 10px;
-}
 
-/* Style the links in the footer */
-.footer-links a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-  font-size: 18px; /* Default font size for larger screens */
-}
-
-.footer-links a:hover {
-  color: #ffcc00; /* Change color on hover */
-  text-decoration: underline; /* Underline on hover */
-}
-
-/* Social icons container */
-.social-icons {
-  margin-top: 15px;
-}
-
-/* Style the social media icons */
-.social-icons a {
-  font-size: 35px; /* Responsive icon size */
-  margin: 0 15px;
-  text-decoration: none;
-}
-
-.social-icons a:hover {
-  color: #ffcc00; /* Icon color on hover */
-}
-
-/* Responsive styles */
-@media (max-width: 1200px) {
-  .footer-content {
-    padding: 20px 10px;
-  }
-
-  .footer-links a {
-    font-size: 3vw; /* Adjust font size for medium-sized screens */
-    margin: 0 8px;
-  }
-
-  .social-icons a {
-    font-size: 4vw; /* Adjust icon size for medium-sized screens */
-  }
-}
-
+/* Responsive */
 @media (max-width: 768px) {
-  /* Stack the links and icons vertically on smaller screens */
-  .footer-content {
-    padding: 15px 10px;
-  }
-
-  .footer-links {
-    margin-top: 15px;
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 
-  .footer-links a {
-    display: block;
-    margin: 10px 0;
-    font-size: 4vw; /* Adjust font size for tablets */
+  .footer-links-list,
+  .footer-contact {
+    align-items: center;
   }
 
-  .social-icons {
-    margin-top: 20px;
-    text-align: center;
-  }
-
-  .social-icons a {
-    font-size: 6vw; /* Adjust icon size for tablets */
-  }
-}
-
-@media (max-width: 480px) {
-  /* Further adjustments for small screens (like phones) */
-  .footer-content p {
-    font-size: 4vw; /* Increase font size for readability on smaller screens */
-  }
-
-  .footer-links a {
-    font-size: 5vw; /* Adjust links font size for small screens */
-    margin: 8px 0;
-  }
-
-  .social-icons a {
-    font-size: 7vw; /* Increase icon size for small screens */
-    margin: 0 8px;
-  }
-}
-
-@media (max-width: 400px) {
-  /* Further reduce sizes for ultra-small screens */
-  .footer-content {
-    padding: 5px; /* Reduce padding for very small screens */
-  }
-
-  .footer-links a {
-    font-size: 6vw; /* Adjust font size for ultra-small screens */
-    margin: 0 3px;
-  }
-
-  .social-icons a {
-    font-size: 8vw; /* Increase icon size for very small screens */
-    margin: 0 3px;
-  }
-
-  .footer-content p {
-    font-size: 6vw; /* Adjust paragraph font size for tiny screens */
+  .footer-social-media {
+    justify-content: center;
   }
 }

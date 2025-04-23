@@ -1,0 +1,52 @@
+.vision-section {
+    background-color: #0c0c0c;
+    color: #ffffff;
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .vision-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .vision-title {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+  
+  .vision-description {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    color: #cccccc;
+  }
+  
+  .vision-points {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 3rem;
+  }
+  
+  
+  .vision-button {
+    padding: 0.9rem 2.2rem;
+    font-size: 1rem;
+    color: #ffffff;
+    background: none;
+    border: 2px solid #ffffff;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .vision-button:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  

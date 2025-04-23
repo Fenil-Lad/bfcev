@@ -1,0 +1,35 @@
+  .loader-container {
+    position: fixed;
+    inset: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .loading-message {
+    position: absolute;
+    top: 10%;
+    text-align: center;
+    width: 100%;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 500;
+    z-index: 1;
+  }
+  
+  .canvas-container {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  /* Optional tweak: smaller text on tiny screens */
+  @media (max-width: 600px) {
+    .loading-message {
+      font-size: 1.2rem;
+    }
+  }
+  

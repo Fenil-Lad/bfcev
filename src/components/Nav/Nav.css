@@ -1,0 +1,120 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1.5rem;
+  padding-top: 20px;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2000;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  backdrop-filter: none;
+}
+
+/* Add background blur when scrolled */
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+
+/* ===== Logo ===== */
+.logo-image {
+  width: 100px;
+  height: auto;
+  color: white;
+}
+
+/* ===== Nav Links ===== */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+
+/* Hover underline animation */
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #0055be;
+  left: 0;
+  bottom: -4px;
+  transition: 0.3s ease;
+}
+/* Make the 5th link's underline active by default */
+.nav-links li:nth-child(4) a::after {
+  width: 100%; 
+  bottom: 1; 
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+
+/* ===== Hamburger Icon ===== */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 22px;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* ===== Mobile Responsive Styles ===== */
+@media (max-width: 950px) {
+  .menu-icon {
+    display: flex;
+  }
+
+  .logo-image {
+    width: 40px; /* smaller logo on mobile */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    z-index: 1500;
+    height: 100vh;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .nav-links.active {
+    max-height: 500px;
+    padding: 1rem 0;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
