@@ -1,52 +1,97 @@
+/* Contact Container */
 .contact-container {
   position: fixed;
   inset: 0;
-  backdrop-filter: blur(10px);
   background: rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  padding: 1rem;
+
+  /* Background Blur Animation */
+  animation: backdropFade 0.8s ease forwards;
 }
 
+@keyframes backdropFade {
+  0% {
+    backdrop-filter: blur(0px);
+  }
+  100% {
+    backdrop-filter: blur(10px);
+  }
+}
+
+/* Contact Form */
 .contact-form {
   position: relative;
   background: transparent;
-  border-radius: 20px;
-  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  padding: 1.5rem;
   width: 100%;
-  max-width: 700px;
+  max-width: 600px;
+  max-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   color: white;
+  opacity: 0;
+  animation: formFadeIn 0.2s ease forwards;
+  animation-delay: 0.3s; /* Delay matches the blur animation */
 }
 
+/* Fade-in form */
+@keyframes formFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Close Button */
 .close-button {
   position: absolute;
   top: 1rem;
   right: 1rem;
   background: transparent;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: white;
   cursor: pointer;
 }
 
+/* Heading Style */
 .contact-form h2 {
   text-align: center;
-  color: white;
-  margin-bottom: 2rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
 }
 
-/* Minimal white underline inputs */
+/* Responsive Input Layout */
+.input-row {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.input-row .input-group {
+  flex: 1;
+  min-width: 120px;
+}
+
+/* Input and Textarea Styling */
 .input-group {
-  margin-bottom: 1.8rem;
+  margin-bottom: 1rem;
 }
 
 .input-group label {
   display: block;
-  margin-bottom: 0.3rem;
-  color: white;
+  margin-bottom: 0.2rem;
+  font-size: 0.85rem;
   font-weight: 300;
-  font-size: 0.9rem;
+  color: white;
 }
 
 .input-group input,
@@ -54,10 +99,10 @@
   width: 100%;
   background: transparent;
   border: none;
-  border-bottom: 2px solid white;
+  border-bottom: 1.5px solid white;
   color: white;
-  padding: 0.5rem 0;
-  font-size: 1rem;
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
   outline: none;
   transition: border-color 0.3s ease;
 }
@@ -67,22 +112,36 @@
   color: rgba(255, 255, 255, 0.4);
 }
 
-.input-group input:focus,
-.input-group textarea:focus {
-  border-bottom: 2px solid white;
-}
-
-/* No resize + height for textarea */
 .input-group textarea {
-  height: 100px;
+  height: 80px;
   resize: none;
 }
 
+/* Checkbox Styling */
+.checkbox-group {
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  line-height: 1.2;
+  color: white;
+  font-weight: 300;
+}
+
+.checkbox-group input {
+  margin-top: 0.2rem;
+}
+
+/* Submit Button */
 button[type="submit"] {
-  width: 100%;
-  padding: 0.9rem;
+  margin-top: auto;
+  padding: 0.8rem;
   border: 2px solid white;
-  border-radius: 30px;
+  border-radius: 25px;
   background: transparent;
   color: white;
   font-size: 1rem;
@@ -93,4 +152,23 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: white;
   color: black;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 600px) {
+  .contact-form {
+    padding: 1.2rem;
+  }
+
+  .input-row {
+    flex-direction: column;
+  }
+
+  .contact-form h2 {
+    font-size: 1.2rem;
+  }
+
+  button[type="submit"] {
+    font-size: 0.95rem;
+  }
 }

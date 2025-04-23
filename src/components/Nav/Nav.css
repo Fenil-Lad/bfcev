@@ -3,21 +3,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 4rem;
+  padding: 1rem 2rem;
   margin-top: 10px;
   color: white;
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 95%;
+  left: 0;
+  right: 0;
+  margin: 0 auto; /* Centers the navbar horizontally */
   z-index: 2000;
   background-color: transparent;
   border-radius: 60px;
   backdrop-filter: none;
   transition: top 0.3s ease, background-color 0.3s ease, backdrop-filter 0.3s ease;
+  margin: 10px;
 }
 
+/* Other styles remain unchanged */
 
 /* Show navbar with blur when scrolled (but not hiding) */
 .navbar.scrolled {

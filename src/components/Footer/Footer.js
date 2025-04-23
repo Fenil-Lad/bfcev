@@ -1,5 +1,7 @@
 import React from 'react';
 import './Footer.css';
+import { Link } from 'react-router-dom';
+
 
 const Footer = () => {
   return (
@@ -18,7 +20,7 @@ const Footer = () => {
           <ul className="footer-links-list">
             <li><a href="/about" className="footer-link">About Us</a></li>
             <li><a href="/services" className="footer-link">Services</a></li>
-            <li><a href="/contact" className="footer-link">Contact</a></li>
+            <li><Link to="/contact" className="footer-link" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.2)' }}>Contact</Link></li>
           </ul>
         </div>
 
@@ -68,7 +70,7 @@ const Footer = () => {
 
       {/* Copyright */}
       <div className="footer-bottom">
-        <p> 
+        <p>
           &copy; {new Date().getFullYear()}. Powered, designed and developed by <a href="https://scalable.ltd/" target="_blank" rel="noopener noreferrer" className="scalable-link">Scalable</a>. All rights reserved.
         </p>
       </div>
