@@ -1,41 +1,44 @@
+/* ===== Navbar Base ===== */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.6rem 1.5rem;
-  padding-top: 20px;
+  padding: 1rem 4rem;
+  margin-top: 10px;
   color: white;
   position: fixed;
   top: 0;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
   z-index: 2000;
-  transition: all 0.3s ease;
   background-color: transparent;
+  border-radius: 60px;
   backdrop-filter: none;
+  transition: top 0.3s ease, background-color 0.3s ease, backdrop-filter 0.3s ease;
 }
 
-/* Scrolled state */
+
+/* Show navbar with blur when scrolled (but not hiding) */
 .navbar.scrolled {
   background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
 }
 
-/* ===== Logo ===== */
-/* .logo-image {
-  width: 100px;
-  height: auto;
-  transition: width 0.3s ease;
-} */
+/* Hide navbar when scrolling down */
+.navbar.hide {
+  top: -100px;
+}
 
+/* ===== Logo ===== */
 .logo-image {
-  width: clamp(60px, 15vw, 100px); /* Responsive sizing */
+  width: clamp(60px, 15vw, 100px);
   height: auto;
   z-index: 2501;
   position: relative;
   transition: width 0.3s ease;
 }
-
 
 /* ===== Nav Links ===== */
 .nav-links {
@@ -53,7 +56,7 @@
   transition: color 0.3s ease;
 }
 
-/* Hover underline */
+/* Hover underline effect */
 .nav-links li a::after {
   content: '';
   position: absolute;
@@ -62,15 +65,9 @@
   background-color: #0055be;
   left: 0;
   bottom: -4px;
-  transition: 0.3s ease;
+  transition: width 0.3s ease;
 }
 
-/* Active underline (default on 4th item) */
-.nav-links li:nth-child(3) a::after {
-  width: 100%;
-}
-
-/* Hover underline effect */
 .nav-links li a:hover::after {
   width: 100%;
 }
@@ -114,7 +111,6 @@
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(10px);
     transition: max-height 0.4s ease, padding 0.3s ease;
-    height: auto;
     padding: 0;
   }
 

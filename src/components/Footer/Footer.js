@@ -33,18 +33,18 @@ const Footer = () => {
             </a>
           </div>
 
-          <div className="contact-item">
+          {/* <div className="contact-item">
             <svg viewBox="0 0 24 24" className="contact-icon">
               <path fill="currentColor" d="M6.6 10.8C8.2 13.9 10.9 16.6 14 18.2l2.1-2.1c.3-.3.8-.4 1.2-.2 1 .4 2.1.6 3.2.6.7 0 1.2.5 1.2 1.2V20c0 .7-.5 1.2-1.2 1.2C10.8 21.2 2.8 13.2 2.8 3.2 2.8 2.5 3.3 2 4 2h2.5c.7 0 1.2.5 1.2 1.2 0 1.1.2 2.2.6 3.2.1.4 0 .9-.3 1.2L6.6 10.8z" />
             </svg>
             <a href="tel:+919876543210" className="contact-link">+91 98765 43210</a>
-          </div>
+          </div> */}
 
           <div className="contact-item">
             <svg viewBox="0 0 24 24" className="contact-icon">
               <path fill="currentColor" d="M4 4h16c1.1 0 2 .9 2 2v1.5l-10 6-10-6V6c0-1.1.9-2 2-2zm0 4.5l10 6 10-6V18c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V8.5z" />
             </svg>
-            <a href="mailto:purchase_hub@electrovolt.in" className="contact-link">purchase_hub@bfcev.com</a>
+            <a href="mailto:purchase_hub@electrovolt.in" className="contact-link">info_hub@bfcev.com</a>
           </div>
         </div>
 
@@ -68,8 +68,8 @@ const Footer = () => {
 
       {/* Copyright */}
       <div className="footer-bottom">
-        <p>
-          &copy; {new Date().getFullYear()} <a href="https://scalable.ltd/" target="_blank" rel="noopener noreferrer" className="scalable-link">Scalable</a>. All rights reserved.
+        <p> 
+          &copy; {new Date().getFullYear()}. Powered, designed and developed by <a href="https://scalable.ltd/" target="_blank" rel="noopener noreferrer" className="scalable-link">Scalable</a>. All rights reserved.
         </p>
       </div>
 
