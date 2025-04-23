@@ -14,20 +14,28 @@
   backdrop-filter: none;
 }
 
-/* Add background blur when scrolled */
+/* Scrolled state */
 .navbar.scrolled {
   background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
 }
 
-
 /* ===== Logo ===== */
-.logo-image {
+/* .logo-image {
   width: 100px;
   height: auto;
-  color: white;
+  transition: width 0.3s ease;
+} */
+
+.logo-image {
+  width: clamp(60px, 15vw, 100px); /* Responsive sizing */
+  height: auto;
+  z-index: 2501;
+  position: relative;
+  transition: width 0.3s ease;
 }
+
 
 /* ===== Nav Links ===== */
 .nav-links {
@@ -45,8 +53,7 @@
   transition: color 0.3s ease;
 }
 
-
-/* Hover underline animation */
+/* Hover underline */
 .nav-links li a::after {
   content: '';
   position: absolute;
@@ -57,16 +64,16 @@
   bottom: -4px;
   transition: 0.3s ease;
 }
-/* Make the 5th link's underline active by default */
-.nav-links li:nth-child(4) a::after {
-  width: 100%; 
-  bottom: 1; 
-}
 
-.nav-links li a:hover::after {
+/* Active underline (default on 4th item) */
+.nav-links li:nth-child(3) a::after {
   width: 100%;
 }
 
+/* Hover underline effect */
+.nav-links li a:hover::after {
+  width: 100%;
+}
 
 /* ===== Hamburger Icon ===== */
 .menu-icon {
@@ -74,6 +81,7 @@
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
+  z-index: 2500;
 }
 
 .bar {
@@ -83,14 +91,14 @@
   transition: all 0.3s ease;
 }
 
-/* ===== Mobile Responsive Styles ===== */
+/* ===== Mobile Styles ===== */
 @media (max-width: 950px) {
   .menu-icon {
     display: flex;
   }
 
   .logo-image {
-    width: 40px; /* smaller logo on mobile */
+    width: 60px;
   }
 
   .nav-links {
@@ -99,13 +107,15 @@
     right: 0;
     width: 100%;
     flex-direction: column;
+    align-items: center;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease;
-    z-index: 1500;
-    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(10px);
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    height: auto;
+    padding: 0;
   }
 
   .nav-links.active {
@@ -114,7 +124,12 @@
   }
 
   .nav-links li {
+    width: 100%;
     text-align: center;
     padding: 1rem 0;
+  }
+
+  .nav-links li a {
+    font-size: 1rem;
   }
 }

@@ -36,7 +36,6 @@ const Nav = () => {
         <li><a href="/about" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.2)' }}>About Us</a></li>
         <li><a href="/services" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.2)' }}>Services</a></li>
         <li><a href="/contact" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.2)' }}>Contact</a></li>
-        <li><a href="/get-started" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.2)' }}>Get Started</a></li>
       </ul>
 
 
