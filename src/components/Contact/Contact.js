@@ -10,11 +10,45 @@ const Contact = ({ onClose }) => {
   const [consentTransactional, setConsentTransactional] = useState(false);
   const [consentMarketing, setConsentMarketing] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Form submitted');
-    // Optionally handle form submission here
+
+    const data = {
+      firstName,
+      lastName,
+      email,
+      phone,
+      message,
+      consentTransactional: consentTransactional ? 'Yes' : 'No',
+      consentMarketing: consentMarketing ? 'Yes' : 'No'
+    };
+
+    try {
+      const response = await fetch('https://sheetdb.io/api/v1/2jzw3j1i9qxj6', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ data }) 
+      });
+
+      if (response.ok) {
+        alert('Form submitted successfully!');
+        // Optionally reset form here
+        setFirstName('');
+        setLastName('');
+        setEmail('');
+        setPhone('');
+        setMessage('');
+        setConsentTransactional(false);
+        setConsentMarketing(false);
+      } else {
+        alert('Error submitting form.');
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+      alert('Error submitting form.');
+    }
   };
+
 
   return (
     <div className="contact-container">
