@@ -8,12 +8,12 @@ const PartnerSection = () => {
   return (
     <section className="partner-section">
       <div className="partner-content">
-        <h2 className="partner-title">Partner With Us</h2>
+        <h2 className="partner-title">Take the next step.</h2>
         <p className="partner-description">
           Transparency. Growth. Sustainability. Everything investors look for in the future of business.
         </p>
         <button className="partner-button" onClick={() => navigate('/contact')}>
-          Power Up Together
+          Get in touch
         </button>
       </div>
     </section>

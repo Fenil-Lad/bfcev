@@ -27,6 +27,7 @@
   z-index: 2;
   height: 100%;
   color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .hero-section::before {
@@ -45,6 +46,7 @@
   font-weight: 700;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .hero-subtitle {
@@ -57,6 +59,7 @@
     0 2px 4px rgba(0, 0, 0, 0.2),
     0 0 10px rgba(0, 0, 0, 0.2);
   padding: 0 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .hero-buttons-container {
@@ -73,15 +76,17 @@
   cursor: pointer;
   transition: all 0.3s ease;
   background: transparent;
-  font-weight: 200;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 #learn-more-btn {
   color: white;
   background-color: #0052a5;
-  background: linear-gradient(135deg, #0f2d5f, #0055be, #3584e5);
+  background: linear-gradient(135deg, #0c244f, #0073ff);
   border: none;
   transition: 0.5s;
+  padding-top: 10px;
 }
 
 #learn-more-btn:hover {
@@ -92,6 +97,7 @@
   color: white;
   border: 2px solid white;
   transition: 0.5s;
+  padding-top: 10px;
 }
 
 #contact-btn:hover {

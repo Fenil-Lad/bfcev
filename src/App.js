@@ -2,8 +2,9 @@ import React, { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Nav from './components/Nav/Nav';
 import Hero from "./components/Hero/Hero";
+import AboutUs from './components/AboutUs/AboutUs';
 import Contact from "./components/Contact/Contact";
-import WhyChooseUs from "./components/WhyChooseUs/WhyChooseUs";
+// import WhyChooseUs from "./components/WhyChooseUs/WhyChooseUs";
 import WhatsInItForYou from "./components/WhatsInItForYou/WhatsInItForYou";
 import Services from "./components/Services/Services";
 import PartnerSection from "./components/PartnerSection/PartnerSection";
@@ -31,7 +32,8 @@ export default function App() {
     <main>
       <Nav />
       <Hero />
-      <WhyChooseUs />
+      <AboutUs></AboutUs>
+      {/* <WhyChooseUs /> */}
       <WhatsInItForYou />
       <Services />
       <PartnerSection />

@@ -27,8 +27,8 @@ const HeroSection = () => {
 
           {/* You can wrap buttons in a div to space them properly */}
           <div className="hero-buttons-container">
-            <button className="hero-button" id='learn-more-btn'>Learn More</button>
-            <button className="hero-button" id='contact-btn' onClick={() => navigate('/contact')}>Contact Us</button>
+            <button className="hero-button" id='learn-more-btn'>Learn more</button>
+            <button className="hero-button" id='contact-btn' onClick={() => navigate('/contact')}>Contact us</button>
           </div>
         </section>
       </div>

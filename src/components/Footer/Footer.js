@@ -7,7 +7,6 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-
         {/* Logo */}
         <div className="footer-logo">
           <a href="/" className="footer-logo-link">
@@ -64,6 +63,7 @@ const Footer = () => {
           <a href="https://linkedin.com" className="footer-social-icon" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-linkedin-in"></i>
           </a>
+
         </div>
 
       </div>

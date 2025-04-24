@@ -1,44 +1,171 @@
+/* Add these new animation styles */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add this class for the animation */
+.card.animate {
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+/* Apply different delays to each card */
+.card:nth-child(1).animate {
+  animation-delay: 0.1s;
+}
+
+.card:nth-child(2).animate {
+  animation-delay: 0.3s;
+}
+
+.card:nth-child(3).animate {
+  animation-delay: 0.5s;
+}
+
+/* Existing styles remain the same */
 .about-us {
-    background: linear-gradient(135deg, #0f2d5f, #0055be);
-    color: white;
-    padding: 4rem 2rem;
-    text-align: center;
+  background-color: #f7f7f7;
+  color: #333;
+  padding: 4rem 2rem;
+  text-align: center;
+  line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Header Styles */
+.about-us h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #0c244f, #0073ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-us p {
+  font-size: 1.2rem;
+  margin: 0 auto 3rem auto;
+  max-width: 750px;
+  color:grey;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}
+
+/* Cards Container */
+.about-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background-color: #1d1d1f;
+  border-radius: 50px;  
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  width: calc(33.333% - 2rem);
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border: none;
+  padding-bottom: 40px;
+  opacity: 0;   
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+  transition: transform 0.3s ease;
+}
+
+.card-content {
+  padding: 2rem;
+  text-align: left;
+}
+
+.card h3 {
+  font-weight: 600;
+  margin: 0 1 0.5rem 0;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: white;
+}
+
+.card p {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .card {
+    width: calc(50% - 1.5rem);
   }
   
   .about-us h2 {
     font-size: 2.5rem;
-    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us {
+    padding: 4rem 1.5rem;
+    text-align: center;
+  }
+
+  .about-us h2 {
+    font-size: 2rem;
+  }
+
+  .about-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 700px;
   }
   
-  .about-us p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+  .card img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us h2 {
+    font-size: 1.8rem;
   }
   
-  .about-us ul {
-    list-style: none;
-    padding: 0;
-    max-width: 600px;
-    margin: 2rem auto 0 auto;
-    text-align: left;
+  .card-content {
+    padding: 1.5rem;
   }
   
-  .about-us li {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    padding-left: 2rem;
-    position: relative;
+  .card h3 {
+    font-size: 1.3rem;
   }
   
-  .about-us li::before {
-    content: '\2022';
-    color: white;
-    position: absolute;
-    left: 0;
-    font-size: 1.5rem;
-    top: 0;
+  .card p {
+    font-size: 1rem;
   }
-  
+}
